@@ -1,0 +1,417 @@
+/* --- BUTTON COMPONENTS --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-title);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-base);
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: var(--transition-base);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid var(--color-primary);
+  box-shadow: 0 4px 14px 0 rgba(86, 65, 153, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(86, 65, 153, 0.4);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: hsl(0, 0%, 100%);
+  transform: translateY(-2px);
+}
+
+.btn-white {
+  background-color: hsl(0, 0%, 100%);
+  color: var(--color-primary);
+  border: 1px solid hsl(0, 0%, 100%);
+}
+
+.btn-white:hover {
+  background-color: var(--color-bg-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #564199 0%, #a076e8 50%, #ff9e7d 100%);
+  color: hsl(0, 0%, 100%) !important;
+  border: none;
+  box-shadow: 0 4px 15px rgba(86, 65, 153, 0.35);
+  text-transform: none;
+  font-weight: var(--weight-semibold);
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #44327a 0%, #8e62d4 50%, #ff8a60 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(86, 65, 153, 0.5);
+  color: hsl(0, 0%, 100%) !important;
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: hsl(0, 0%, 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  text-transform: none;
+  font-weight: var(--weight-semibold);
+}
+
+.btn-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: hsl(0, 0%, 100%);
+  transform: translateY(-2px);
+  color: hsl(0, 0%, 100%) !important;
+}
+
+/* --- GLASSMORPHISM & CARDS --- */
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-accent);
+}
+
+.card-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  transition: var(--transition-base);
+}
+
+.card-glass:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(86, 65, 153, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* --- NAV BAR --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: var(--transition-base);
+  background: transparent;
+}
+
+.navbar .container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  transition: var(--transition-base);
+}
+
+.navbar-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-scrolled {
+  height: 75px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-scrolled .nav-link {
+  color: var(--color-primary);
+}
+
+.navbar-scrolled .nav-link::after {
+  background-color: var(--color-primary);
+}
+
+.navbar:not(.navbar-scrolled) .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar:not(.navbar-scrolled) .nav-link:hover {
+  color: hsl(0, 0%, 100%);
+}
+
+.navbar:not(.navbar-scrolled) .nav-link::after {
+  background-color: hsl(0, 0%, 100%);
+}
+
+.nav-link {
+  font-family: var(--font-title);
+  font-weight: var(--weight-medium);
+  font-size: var(--font-sm);
+  color: var(--color-primary);
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: var(--transition-base);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: var(--transition-base);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link-active::after {
+  width: 80%;
+}
+
+/* --- FORM CONTROLS --- */
+.form-group {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: var(--font-title);
+  font-weight: var(--weight-semibold);
+  font-size: var(--font-sm);
+  color: var(--color-primary);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.875rem 1.2rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-light);
+  font-family: var(--font-body);
+  font-size: var(--font-sm);
+  color: var(--color-text-dark);
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(86, 65, 153, 0.15);
+  background-color: hsl(0, 0%, 100%);
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* --- BADGES & ACCENTS --- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-title);
+  font-size: var(--font-xs);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.badge-accent {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+}
+
+.badge-primary {
+  background-color: var(--color-primary);
+  color: hsl(0, 0%, 100%);
+}
+
+/* --- HERO SECTION SPECIALS --- */
+.hero-glow {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(219, 212, 249, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Custom Lilac Scroll Styles for Mobile Menu to avoid oklab() translation */
+@media (max-width: 767px) {
+  .mobile-scrolled-lilac {
+    background-color: rgba(130, 80, 220, 0.72) !important;
+    backdrop-filter: blur(24px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
+    box-shadow: 0 8px 32px rgba(86, 65, 153, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  }
+  .mobile-unscrolled-lilac {
+    background-color: rgba(140, 90, 230, 0.6) !important;
+    backdrop-filter: blur(24px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    border-radius: 9999px !important;
+    box-shadow: 0 4px 20px rgba(86, 65, 153, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  }
+  .mobile-dropdown-scrolled-lilac {
+    background-color: rgba(120, 70, 210, 0.75) !important;
+    backdrop-filter: blur(24px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 12px 40px rgba(86, 65, 153, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  }
+  .mobile-dropdown-unscrolled-lilac {
+    background-color: rgba(130, 80, 220, 0.65) !important;
+    backdrop-filter: blur(24px) saturate(1.3) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.25) !important;
+    box-shadow: 0 8px 30px rgba(86, 65, 153, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  }
+}
+
+/* Custom Lilac Scroll Style for Desktop Menu */
+@media (min-width: 768px) {
+  .desktop-scrolled-lilac {
+    background-color: rgba(140, 100, 245, 0.35) !important;
+    backdrop-filter: blur(24px) saturate(1.4) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 12px 40px rgba(86, 65, 153, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  }
+}
+
+/* Logo visibility selectors for mobile vs desktop */
+.logo-mobile-only {
+  display: block !important;
+}
+.logo-desktop-only {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .logo-mobile-only {
+    display: none !important;
+  }
+  .logo-desktop-only {
+    display: block !important;
+  }
+}
+
+/* --- SCROLL REVEAL / MOTION ANIMATIONS --- */
+
+/* Base class for elements that fade & slide up */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered service cards */
+.reveal-stagger-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.1s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 1.1s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color var(--transition-base),
+              box-shadow var(--transition-base);
+  will-change: transform, opacity;
+}
+
+.reveal-stagger-item.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image zoom-out & de-blur when revealed */
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.12);
+  filter: blur(4px) brightness(0.92);
+  transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.revealed .service-img {
+  transform: scale(1);
+  filter: blur(0) brightness(1);
+}
+
+/* Maintain hover zoom only after the card is revealed */
+.card.revealed:hover .service-img {
+  transform: scale(1.06);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Image blur-in when revealed (for non-staged general images like in Team section) */
+.reveal-img-blur {
+  filter: blur(8px) brightness(0.92);
+  transition: filter 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: filter;
+}
+
+.revealed .reveal-img-blur {
+  filter: blur(0) brightness(1);
+}
+

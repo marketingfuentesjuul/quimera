@@ -1,0 +1,85 @@
+:root {
+  /* --- COLOR SYSTEM (HSL) --- */
+  /* Primary Brand: Deep Violet */
+  --primary-hue: 254;
+  --color-primary: hsl(var(--primary-hue), 40%, 43%);
+  --color-primary-light: hsl(var(--primary-hue), 50%, 60%);
+  --color-primary-dark: hsl(var(--primary-hue), 50%, 25%);
+  
+  /* Complementary Brand: Pastel Orange (matching the brand gradient accent) */
+  --color-primary-complement: hsl(22, 100%, 76%);
+  --color-primary-complement-light: hsl(22, 100%, 85%);
+  --color-primary-complement-dark: hsl(22, 100%, 45%);
+  
+  
+  /* Secondary Brand: Pastel Lilac */
+  --secondary-hue: 251;
+  --color-accent: hsl(var(--secondary-hue), 65%, 90%);
+  --color-accent-light: hsl(var(--secondary-hue), 80%, 96%);
+  --color-accent-dark: hsl(var(--secondary-hue), 50%, 75%);
+  
+  /* Dark / Light Neutrals */
+  --color-text-dark: hsl(var(--primary-hue), 40%, 15%);
+  --color-text-muted: hsl(var(--primary-hue), 20%, 45%);
+  --color-bg-light: hsl(var(--primary-hue), 20%, 98%);
+  --color-bg-card: hsl(0, 0%, 100%);
+  --color-border: hsl(var(--primary-hue), 30%, 90%);
+  
+  /* Status Colors */
+  --color-success: hsl(150, 70%, 35%);
+  --color-error: hsl(0, 80%, 45%);
+  --color-warning: hsl(40, 90%, 45%);
+
+  /* Glassmorphism Defaults */
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(86, 65, 153, 0.08);
+
+  /* --- TYPOGRAPHY (Outfit & Inter) --- */
+  --font-title: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Font Sizes */
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 2rem;
+  --font-4xl: 2.75rem;
+  --font-5xl: 3.5rem;
+
+  /* Font Weights */
+  --weight-light: 300;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-extrabold: 800;
+
+  /* Line Heights */
+  --lh-tight: 1.2;
+  --lh-base: 1.6;
+  --lh-loose: 1.8;
+
+  /* --- SHADOWS & DECORATIONS --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.08), 0 10px 10px -5px rgba(15, 23, 42, 0.04);
+  
+  /* Borders and Border Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* --- ANIMATIONS & TRANSITIONS --- */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Max Container Width */
+  --max-width: 1280px;
+}

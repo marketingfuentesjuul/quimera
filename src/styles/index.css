@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+/* --- SYSTEM DESIGN SYSTEM MASTER COMPILER --- */
+
+/* 1. Global Tokens and Design Variables */
+@import './variables.css';
+
+/* 2. Resets, Grids, Layouts, and Breakpoints */
+@import './layout.css';
+
+/* 3. Reusable UI Components, Badges, Forms, and Buttons */
+@import './components.css';

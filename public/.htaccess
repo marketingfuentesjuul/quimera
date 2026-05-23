@@ -1,0 +1,49 @@
+# -----------------------------------------------------------------------------
+# QUIMERA SITE - CONFIGURACIÓN DE SEGURIDAD APACHE (SITEGROUND .htaccess)
+# Copia el contenido de este archivo en el archivo '.htaccess' del directorio 
+# principal ('public_html') de tu sitio web en SiteGround para activar seguridad.
+# -----------------------------------------------------------------------------
+
+# 1. FORZAR HTTPS (SSL) Y REDIRECCIÓN WWW
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Si la solicitud no es a través de HTTPS, redirigir
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Soporte para Single Page Application (React Router)
+    # Si el archivo o directorio solicitado no existe, redirigir todo a index.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.html [L]
+</IfModule>
+
+# 2. CABECERAS DE SEGURIDAD HTTP (SECURITY HEADERS)
+<IfModule mod_headers.c>
+    # Evita que el sitio sea enmarcado en otros dominios (Mitiga Clickjacking)
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Protege contra vulnerabilidades de MIME-type sniffing (Fuerza la cabecera del servidor)
+    Header set X-Content-Type-Options "nosniff"
+    
+    # Activa la protección contra XSS en navegadores legados
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Fuerza al navegador a usar conexiones HTTPS únicamente (HSTS - 1 año)
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    
+    # Controla la información de referencia que se envía en enlaces externos
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    
+    # Restringe permisos del navegador para cámaras, micrófonos, etc. (Opcional y seguro)
+    Header set Permission-Policy "geolocation=(), microphone=(), camera=(), payment=()"
+</IfModule>
+
+# 3. PREVENCIÓN DE NAVEGACIÓN DE DIRECTORIOS
+# Evita que las personas vean la lista de archivos si una carpeta no tiene index.html
+Options -Indexes
+
+# 4. DESHABILITAR FIRMAS DE SERVIDOR
+# Oculta información técnica del servidor web Apache y del sistema operativo
+ServerSignature Off
