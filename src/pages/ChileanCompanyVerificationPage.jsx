@@ -14,7 +14,6 @@ const ChileanCompanyVerificationPage = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = 'Chilean Company Verification — Quimera Consulting Group';
   }, []);
 

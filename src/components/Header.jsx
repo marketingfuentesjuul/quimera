@@ -73,7 +73,7 @@ const Header = () => {
 
       if (pathname !== '/') {
         // Redirigir a la página de inicio con el targetId como hash
-        navigate('/' + (targetId === '#top' ? '' : targetId))
+        navigate('/' + (targetId === '#top' ? '' : targetId), { viewTransition: true })
         return
       }
 

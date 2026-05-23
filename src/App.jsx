@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { useLayoutEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -9,6 +10,16 @@ import Footer from './components/Footer';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
 import ChileanCompanyVerificationPage from './pages/ChileanCompanyVerificationPage';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function HomePage() {
   return (
@@ -28,12 +39,15 @@ function HomePage() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/team" element={<TeamPage />} />
-      <Route path="/contact" element={<ContactPage />} />
-      <Route path="/chilean-company-verification" element={<ChileanCompanyVerificationPage />} />
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/chilean-company-verification" element={<ChileanCompanyVerificationPage />} />
+      </Routes>
+    </>
   );
 }
 

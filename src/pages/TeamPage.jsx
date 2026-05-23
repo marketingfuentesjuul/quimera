@@ -6,7 +6,6 @@ import { DottedBackground } from '@/components/ui/dotted-vignette-background';
 
 const TeamPage = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = 'Our Team — Quimera Consulting Group';
   }, []);
 

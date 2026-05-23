@@ -12,7 +12,6 @@ const ContactPage = () => {
   });
 
   useEffect(() => {
-    window.scrollTo(0, 0);
     document.title = 'Contacto — Quimera Consulting Group';
   }, []);
 
