@@ -91,7 +91,7 @@ const Header = () => {
 
   return (
     <header className={`${isContactPage ? 'absolute' : 'fixed'} w-full z-50 transition-all duration-500 flex justify-center ${
-      scrolled ? 'top-[18px]' : 'top-0 md:top-[18px]'
+      (scrolled || isSpecialHeader) ? 'top-[18px]' : 'top-0 md:top-[18px]'
     }`}>
       <div
         className={`transition-all duration-500 ${
