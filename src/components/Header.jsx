@@ -354,24 +354,6 @@ const Header = () => {
               </a>
             )
           })}
-          {ctaButton.isRoute ? (
-            <Link
-              viewTransition
-              to={ctaButton.path}
-              onClick={() => setMobileMenuOpen(false)}
-              className="btn btn-gradient w-full mt-2 text-center !rounded-full py-3 text-xs font-bold tracking-wider hover:scale-95 active:scale-90 transition-all duration-200"
-            >
-              {ctaButton.text}
-            </Link>
-          ) : (
-            <a
-              href={ctaButton.path}
-              onClick={(e) => ctaButton.isScroll ? handleScrollTo(e, ctaButton.path) : null}
-              className="btn btn-gradient w-full mt-2 text-center !rounded-full py-3 text-xs font-bold tracking-wider hover:scale-95 active:scale-90 transition-all duration-200"
-            >
-              {ctaButton.text}
-            </a>
-          )}
         </div>
       </div>
     </header>

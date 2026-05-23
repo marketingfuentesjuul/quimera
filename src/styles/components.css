@@ -296,13 +296,12 @@ textarea.form-control {
                 inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   }
   .mobile-unscrolled-lilac {
-    background-color: rgba(90, 65, 160, 0.85) !important;
-    backdrop-filter: blur(20px) !important;
-    -webkit-backdrop-filter: blur(20px) !important;
+    background-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     border: none !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow: none !important;
     border-radius: 0 !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
   }
   .mobile-dropdown-scrolled-lilac {
     background-color: rgba(220, 205, 255, 0.9) !important;
