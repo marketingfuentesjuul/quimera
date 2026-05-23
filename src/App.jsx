@@ -8,7 +8,6 @@ import Services from './components/Services';
 import TeamSection from './components/TeamSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import CTASection from './components/CTASection';
-import BrandBanner from './components/BrandBanner';
 import Footer from './components/Footer';
 import TeamPage from './pages/TeamPage';
 import ContactPage from './pages/ContactPage';
@@ -34,7 +33,6 @@ function HomePage() {
         <TeamSection />
         <WhyChooseUs />
         <CTASection />
-        <BrandBanner />
       </main>
       <Footer />
     </>
