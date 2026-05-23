@@ -124,9 +124,6 @@ const Footer = () => {
               <a href="mailto:contacto@quimeracg.cl" className="btn btn-white" style={{ padding: '0.6rem 1.25rem', fontSize: 'var(--font-xs)', borderRadius: 'var(--radius-sm)', textTransform: 'none' }}>
                 Email Us
               </a>
-              <a href="https://wa.me/56912345678" target="_blank" rel="noreferrer" className="btn btn-secondary" style={{ borderColor: 'white', color: 'white', padding: '0.6rem 1.25rem', fontSize: 'var(--font-xs)', borderRadius: 'var(--radius-sm)', textTransform: 'none' }}>
-                WhatsApp Us
-              </a>
             </div>
           </div>
           
