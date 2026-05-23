@@ -225,7 +225,7 @@ const Header = () => {
               <Link
                 viewTransition
                 to={ctaButton.path}
-                className={`hidden md:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
+                className={`hidden lg:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
                   (isContactPage || isVerificationPage)
                     ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
                     : isTeamPage
@@ -241,7 +241,7 @@ const Header = () => {
               <a
                 href={ctaButton.path}
                 onClick={(e) => ctaButton.isScroll ? handleScrollTo(e, ctaButton.path) : null}
-                className={`hidden md:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
+                className={`hidden lg:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
                   (isContactPage || isVerificationPage)
                     ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
                     : isTeamPage
