@@ -8,23 +8,24 @@ const CTASection = () => {
     <section 
       style={{ 
         position: 'relative', 
-        backgroundColor: 'var(--color-bg-light)', 
-        paddingTop: '6rem', 
-        paddingBottom: '6rem',
+        backgroundColor: '#070512', 
+        background: 'linear-gradient(135deg, #070512 0%, #0c0922 50%, #05030a 100%)',
+        paddingTop: '7rem', 
+        paddingBottom: '7rem',
         overflow: 'hidden'
       }}
     >
-      {/* Background Glowing Blobs matching the image's aura */}
+      {/* Background Glowing Blobs - Premium Violet & Lilac Auras */}
       <div 
         style={{
           position: 'absolute',
-          top: '20%',
-          left: '10%',
-          width: '350px',
-          height: '350px',
+          top: '15%',
+          left: '12%',
+          width: '380px',
+          height: '380px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(255, 158, 125, 0.25) 0%, rgba(255, 255, 255, 0) 70%)',
-          filter: 'blur(50px)',
+          background: 'radial-gradient(circle, rgba(160, 118, 232, 0.18) 0%, rgba(255, 255, 255, 0) 70%)',
+          filter: 'blur(60px)',
           zIndex: 1,
           pointerEvents: 'none'
         }}
@@ -32,13 +33,13 @@ const CTASection = () => {
       <div 
         style={{
           position: 'absolute',
-          bottom: '10%',
+          bottom: '15%',
           right: '15%',
-          width: '400px',
-          height: '400px',
+          width: '420px',
+          height: '420px',
           borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(228, 217, 255, 0.45) 0%, rgba(255, 255, 255, 0) 70%)',
-          filter: 'blur(60px)',
+          background: 'radial-gradient(circle, rgba(86, 65, 153, 0.22) 0%, rgba(255, 255, 255, 0) 70%)',
+          filter: 'blur(70px)',
           zIndex: 1,
           pointerEvents: 'none'
         }}
@@ -56,105 +57,107 @@ const CTASection = () => {
             alignItems: 'center'
           }}
         >
-          {/* Glassmorphic Container Card */}
+          {/* Dark Glassmorphic Container Card */}
           <div 
-            className="card-glass"
             style={{
               width: '100%',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               textAlign: 'center',
-              padding: '4rem 3rem',
+              padding: '4.5rem 3rem',
               borderRadius: '24px',
-              border: '1px solid rgba(255, 255, 255, 0.6)',
-              background: 'rgba(255, 255, 255, 0.65)',
-              boxShadow: '0 20px 50px rgba(86, 65, 153, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.5)',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)'
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              background: 'rgba(255, 255, 255, 0.03)',
+              boxShadow: '0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+              backdropFilter: 'blur(24px)',
+              WebkitBackdropFilter: 'blur(24px)'
             }}
           >
-            {/* Small Rounded Top Tag */}
+            {/* Small Glass Tag at Top */}
             <div 
               style={{ 
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '0.5rem',
-                backgroundColor: '#ffffff',
-                border: '1px solid rgba(86, 65, 153, 0.1)',
+                backgroundColor: 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid rgba(255, 255, 255, 0.1)',
                 padding: '0.45rem 1.15rem',
                 borderRadius: '9999px',
-                color: 'var(--color-primary-dark)',
+                color: '#ffffff',
                 fontWeight: 'var(--weight-semibold)',
                 fontSize: 'var(--font-sm)',
-                boxShadow: '0 4px 12px rgba(86, 65, 153, 0.04)',
+                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
                 marginBottom: '1.75rem',
                 fontFamily: 'var(--font-title)',
-                letterSpacing: '0.02em',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
                 transition: 'transform 0.3s ease'
               }}
               className="cta-badge-hover"
             >
-              <span style={{ color: 'var(--color-primary-complement-dark)' }}>✦</span>
-              <span>Comienza tu viaje</span>
+              <span style={{ color: '#bfa3ff' }}>✦</span>
+              <span>Start your journey</span>
             </div>
 
-            {/* Title */}
+            {/* Title (White with Lilac/Violet highlight) */}
             <h2 
               style={{ 
                 fontSize: 'clamp(2rem, 5vw, 2.75rem)', 
                 fontWeight: 'var(--weight-extrabold)',
                 lineHeight: '1.25',
-                color: 'var(--color-text-dark)', 
+                color: '#ffffff', 
                 marginBottom: '1.5rem',
                 fontFamily: 'var(--font-title)',
                 maxWidth: '720px'
               }}
             >
-              ¿Estás listo para comenzar tu nuevo{' '}
+              Are you ready to start your new{' '}
               <span 
                 style={{ 
-                  color: 'var(--color-primary-complement-dark)',
-                  background: 'linear-gradient(135deg, var(--color-primary-complement-dark) 30%, #e64a00 100%)',
+                  color: '#bfa3ff',
+                  background: 'linear-gradient(135deg, #bfa3ff 30%, #a076e8 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   display: 'inline-block'
                 }}
               >
-                camino en Chile
+                path in Chile
               </span>
               ?
             </h2>
 
-            {/* Paragraph Text */}
+            {/* Paragraph Text (White/muted) */}
             <p 
               style={{ 
                 fontSize: 'var(--font-lg)', 
                 lineHeight: '1.65',
-                color: 'var(--color-text-muted)', 
+                color: 'rgba(255, 255, 255, 0.75)', 
                 fontFamily: 'var(--font-body)',
                 maxWidth: '680px',
-                marginBottom: '2.5rem'
+                marginBottom: '2.75rem'
               }}
             >
-              Escríbenos o clickea el siguiente botón y ponte en contacto con nuestro equipo para que podamos ayudarte a comenzar a llevarte tu transición a Chile.
+              Write to us or click the button below and get in touch with our team so we can help you begin your transition to Chile.
             </p>
 
-            {/* Contact CTA Button */}
+            {/* Glassmorphic Contact CTA Button */}
             <Link 
               viewTransition 
               to="/contact" 
-              className="btn btn-gradient btn-cta-pulse" 
+              className="btn btn-cta-glass" 
               style={{ 
                 borderRadius: 'var(--radius-full)', 
                 textTransform: 'none', 
                 padding: '1.1rem 2.8rem',
                 fontSize: 'var(--font-base)',
                 fontWeight: 'var(--weight-bold)',
-                boxShadow: '0 10px 25px rgba(230, 74, 0, 0.25)',
-                background: 'linear-gradient(135deg, var(--color-primary-complement-dark) 0%, #ff8a60 100%)',
+                background: 'rgba(255, 255, 255, 0.06)',
                 color: '#ffffff',
-                border: 'none',
+                border: '1px solid rgba(255, 255, 255, 0.18)',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                boxShadow: '0 10px 30px rgba(0, 0, 0, 0.25)',
                 transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)'
               }}
             >
@@ -164,22 +167,25 @@ const CTASection = () => {
         </div>
       </div>
 
-      {/* Adding interactive classes */}
+      {/* Styles for glassmorphism interactive states */}
       <style dangerouslySetInnerHTML={{__html: `
         @media (max-width: 640px) {
           .card-glass {
             padding: 3rem 1.5rem !important;
           }
         }
-        .btn-cta-pulse:hover {
-          transform: translateY(-3px) scale(1.03) !important;
-          box-shadow: 0 15px 30px rgba(230, 74, 0, 0.35) !important;
+        .btn-cta-glass:hover {
+          background: rgba(255, 255, 255, 0.12) !important;
+          border-color: rgba(255, 255, 255, 0.4) !important;
+          transform: translateY(-3px) scale(1.02) !important;
+          box-shadow: 0 12px 35px rgba(160, 118, 232, 0.22) !important;
         }
-        .btn-cta-pulse:active {
+        .btn-cta-glass:active {
           transform: translateY(-1px) scale(0.98) !important;
         }
         .cta-badge-hover:hover {
           transform: translateY(-2px);
+          background-color: rgba(255, 255, 255, 0.08) !important;
         }
       `}} />
     </section>
