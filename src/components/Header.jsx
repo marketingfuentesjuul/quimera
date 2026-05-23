@@ -276,10 +276,10 @@ const Header = () => {
         </nav>
       </div>
 
-      {/* Menú Desplegable Móvil con Glassmorphism - Ajustado de forma dinámica */}
+      {/* Menú Desplegable Móvil con Glassmorphism */}
       <div
-        className={`md:hidden fixed left-4 right-4 rounded-[2rem] p-6 transition-all duration-300 ${
-          isSpecialHeader ? 'top-[90px] mobile-dropdown-scrolled-lilac' : scrolled ? 'top-[116px] mobile-dropdown-scrolled-lilac' : 'top-[158px] mobile-dropdown-unscrolled-lilac'
+        className={`md:hidden absolute left-4 right-4 top-full mt-2 rounded-[2rem] p-6 transition-all duration-300 ${
+          isSpecialHeader || scrolled ? 'mobile-dropdown-scrolled-lilac' : 'mobile-dropdown-unscrolled-lilac'
         } ${
           mobileMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 -translate-y-4 invisible pointer-events-none'
         }`}
