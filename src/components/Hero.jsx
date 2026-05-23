@@ -30,7 +30,7 @@ const Hero = () => {
             alignSelf: 'center'
           }}
         >
-          Your Boutique Gateway to Chile
+          Your Boutique Gateway
         </span>
         
         <h1 
