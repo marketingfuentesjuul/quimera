@@ -26,7 +26,6 @@ function ScrollToTop() {
 function HomePage() {
   return (
     <>
-      <Header />
       <main>
         <Hero />
         <Services />
@@ -45,6 +44,7 @@ function App() {
   return (
     <>
       <ScrollToTop />
+      <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />

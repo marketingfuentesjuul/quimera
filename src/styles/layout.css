@@ -168,11 +168,11 @@ main {
 }
 
 ::view-transition-old(page-content) {
-  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+  animation: 200ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
 }
 
 ::view-transition-new(page-content) {
-  animation: 500ms cubic-bezier(0.16, 1, 0.3, 1) both slide-up-fade-in;
+  animation: 400ms cubic-bezier(0.16, 1, 0.3, 1) both slide-up-fade-in;
 }
 
 @keyframes fade-out {
@@ -204,7 +204,7 @@ main {
 }
 
 .no-view-transition main {
-  animation: page-mount-fade 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: page-mount-fade 400ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 /* Force dark transition canvas to prevent any white background flashes */

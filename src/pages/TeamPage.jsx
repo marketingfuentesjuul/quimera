@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Header from '../components/Header';
 import Team from '../components/Team';
 import Footer from '../components/Footer';
 import { DottedBackground } from '@/components/ui/dotted-vignette-background';
@@ -25,7 +24,6 @@ const TeamPage = () => {
         />
       </div>
 
-      <Header />
       <main className="flex-1" style={{ paddingTop: '90px' }}>
         <Team />
       </main>

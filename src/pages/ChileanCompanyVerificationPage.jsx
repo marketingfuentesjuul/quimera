@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { DottedBackground } from '@/components/ui/dotted-vignette-background';
 
@@ -43,8 +42,6 @@ const ChileanCompanyVerificationPage = () => {
           dotSpacing={14}
         />
       </div>
-
-      <Header />
       
       {/* Background Glow effects */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-900/10 rounded-full blur-[140px] pointer-events-none z-0"></div>
