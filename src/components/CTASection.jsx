@@ -138,7 +138,7 @@ const CTASection = () => {
                 marginBottom: '2.75rem'
               }}
             >
-              Click the button below and get in touch with our team so we can help you begin your transition to Chile.
+              If you have any questions or would like guidance on your next steps, we’re here to help.
             </p>
 
             {/* Glassmorphic Contact CTA Button */}
