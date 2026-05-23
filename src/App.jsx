@@ -7,6 +7,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import TeamSection from './components/TeamSection';
 import WhyChooseUs from './components/WhyChooseUs';
+import CTASection from './components/CTASection';
 import BrandBanner from './components/BrandBanner';
 import Footer from './components/Footer';
 import TeamPage from './pages/TeamPage';
@@ -32,6 +33,7 @@ function HomePage() {
         <Services />
         <TeamSection />
         <WhyChooseUs />
+        <CTASection />
         <BrandBanner />
       </main>
       <Footer />
