@@ -8,8 +8,16 @@
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
-    # Si la solicitud no es a través de HTTPS, redirigir
+    # Regla 1: Si no tiene WWW (y no es localhost ni IP local), redirigir a WWW con HTTPS
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+    RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Regla 2: Si tiene WWW pero no es HTTPS (y no es localhost ni IP local), redirigir a HTTPS
     RewriteCond %{HTTPS} off
+    RewriteCond %{HTTP_HOST} !^localhost [NC]
+    RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
     RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
     
     # Soporte para Single Page Application (React Router)
