@@ -40,7 +40,8 @@ jobs:
 
       - name: 🧪 Test SSH Connection (Debug)
         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "echo '=== PWD ===' && pwd && echo '=== LS HOME ===' && ls -la && echo '=== LS WWW ===' && ls -la www/ || true" || true
+          OUTPUT=$(ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "ls -la ~/www/ || true" | tr '\n' ' ')
+          echo "::warning file=.github,line=1::Remote directories: $OUTPUT"
 
       - name: 🚀 Deploy with rsync
         run: |
