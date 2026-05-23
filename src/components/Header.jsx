@@ -90,14 +90,16 @@ const Header = () => {
   }
 
   return (
-    <header className={`${isContactPage ? 'absolute' : 'fixed'} w-full z-50 transition-all duration-500 flex justify-center top-[18px]`}>
+    <header className={`${isContactPage ? 'absolute' : 'fixed'} w-full z-50 transition-all duration-500 flex justify-center ${
+      scrolled ? 'top-[18px]' : 'top-0 md:top-[18px]'
+    }`}>
       <div
-        className={`transition-all duration-500 mx-4 ${
+        className={`transition-all duration-500 ${
           isSpecialHeader
-            ? 'w-[calc(100%-3rem)] max-w-5xl rounded-full px-8 md:px-12'
+            ? 'mx-4 w-[calc(100%-3rem)] max-w-5xl rounded-full px-8 md:px-12'
             : scrolled
-              ? 'w-[calc(100%-3rem)] max-w-5xl md:bg-white/10 md:backdrop-blur-2xl md:shadow-[0_12px_40px_rgba(0,0,0,0.25)] md:border md:border-white/15 rounded-full py-3 px-8 md:px-12 mobile-scrolled-lilac desktop-scrolled-lilac'
-              : 'w-[calc(100%-2rem)] max-w-7xl md:bg-transparent md:border md:border-transparent py-6 px-4 mobile-unscrolled-lilac'
+              ? 'mx-4 w-[calc(100%-3rem)] max-w-5xl md:bg-white/10 md:backdrop-blur-2xl md:shadow-[0_12px_40px_rgba(0,0,0,0.25)] md:border md:border-white/15 rounded-full py-3 px-6 md:px-12 mobile-scrolled-lilac desktop-scrolled-lilac'
+              : 'mx-0 w-full md:mx-4 md:w-[calc(100%-2rem)] max-w-7xl md:bg-transparent md:border md:border-transparent py-4 px-6 md:py-6 md:px-4 mobile-unscrolled-lilac'
         }`}
         style={
           isSpecialHeader
@@ -128,7 +130,7 @@ const Header = () => {
               }`}>
                 {/* Logo para móvil */}
                 <img
-                  src="/images/logo-mobile.png"
+                  src="/images/logo-white-wordmark.png"
                   alt="Quimera Logo Mobile"
                   className="logo-mobile-only absolute top-0 left-0 h-full w-auto object-contain"
                 />
@@ -223,7 +225,7 @@ const Header = () => {
               <Link
                 viewTransition
                 to={ctaButton.path}
-                className={`hidden sm:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
+                className={`hidden md:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
                   (isContactPage || isVerificationPage)
                     ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
                     : isTeamPage
@@ -239,7 +241,7 @@ const Header = () => {
               <a
                 href={ctaButton.path}
                 onClick={(e) => ctaButton.isScroll ? handleScrollTo(e, ctaButton.path) : null}
-                className={`hidden sm:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
+                className={`hidden md:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
                   (isContactPage || isVerificationPage)
                     ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
                     : isTeamPage

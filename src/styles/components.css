@@ -288,36 +288,37 @@ textarea.form-control {
 /* Custom Lilac Scroll Styles for Mobile Menu to avoid oklab() translation */
 @media (max-width: 767px) {
   .mobile-scrolled-lilac {
-    background-color: rgba(130, 80, 220, 0.72) !important;
+    background-color: rgba(210, 195, 255, 0.82) !important;
     backdrop-filter: blur(24px) saturate(1.4) !important;
     -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
-    box-shadow: 0 8px 32px rgba(86, 65, 153, 0.3),
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 8px 32px rgba(86, 65, 153, 0.25),
                 inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   }
   .mobile-unscrolled-lilac {
-    background-color: rgba(140, 90, 230, 0.6) !important;
-    backdrop-filter: blur(24px) saturate(1.3) !important;
-    -webkit-backdrop-filter: blur(24px) saturate(1.3) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    border-radius: 9999px !important;
-    box-shadow: 0 4px 20px rgba(86, 65, 153, 0.25),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    background-color: rgba(90, 65, 160, 0.85) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
   }
   .mobile-dropdown-scrolled-lilac {
-    background-color: rgba(120, 70, 210, 0.75) !important;
+    background-color: rgba(220, 205, 255, 0.9) !important;
     backdrop-filter: blur(24px) saturate(1.4) !important;
     -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    box-shadow: 0 12px 40px rgba(86, 65, 153, 0.3),
-                inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    border: 1px solid rgba(255, 255, 255, 0.35) !important;
+    box-shadow: 0 12px 40px rgba(86, 65, 153, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25) !important;
   }
   .mobile-dropdown-unscrolled-lilac {
-    background-color: rgba(130, 80, 220, 0.65) !important;
+    background-color: rgba(220, 205, 255, 0.9) !important;
     backdrop-filter: blur(24px) saturate(1.3) !important;
     -webkit-backdrop-filter: blur(24px) saturate(1.3) !important;
-    border: 1px solid rgba(255, 255, 255, 0.25) !important;
-    box-shadow: 0 8px 30px rgba(86, 65, 153, 0.25),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 30px rgba(86, 65, 153, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
   }
 }
 

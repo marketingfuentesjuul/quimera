@@ -11,6 +11,8 @@ const ChileanCompanyVerificationPage = () => {
     message: ''
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   useEffect(() => {
     document.title = 'Chilean Company Verification — Quimera Consulting Group';
@@ -21,10 +23,40 @@ const ChileanCompanyVerificationPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Verification inquiry submitted:', formData);
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError(false);
+
+    const webhookUrl = import.meta.env.VITE_N8N_VERIFICATION_WEBHOOK_URL || 'https://n8n.yourdomain.com/webhook/verificacion-quimera';
+
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({
+          fullName: '',
+          email: '',
+          company: '',
+          jobTitle: '',
+          message: ''
+        });
+      } else {
+        setSubmitError(true);
+      }
+    } catch (err) {
+      console.error('Error submitting verification inquiry to N8N:', err);
+      setSubmitError(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -80,6 +112,11 @@ const ChileanCompanyVerificationPage = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
+                  {submitError && (
+                    <div className="bg-red-950/20 border border-red-500/30 text-red-200 text-sm rounded-2xl p-4 text-center font-medium">
+                      There was an error sending your inquiry. Please try again later.
+                    </div>
+                  )}
                   {/* Full Name */}
                   <div className="flex flex-col gap-2">
                     <label className="block text-xs font-bold text-white/80 uppercase tracking-wider">
@@ -164,12 +201,25 @@ const ChileanCompanyVerificationPage = () => {
                   <div className="mt-4">
                     <button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-[#6c4ebe] to-[#4b308e] hover:from-[#7d5df0] hover:to-[#5839a8] active:scale-[0.98] text-white font-bold tracking-[0.15em] uppercase py-4 rounded-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(108,78,190,0.4)] hover:shadow-[0_15px_40px_rgba(108,78,190,0.6)] border border-white/10 flex items-center justify-center gap-2 group text-sm"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-[#6c4ebe] to-[#4b308e] hover:from-[#7d5df0] hover:to-[#5839a8] active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100 text-white font-bold tracking-[0.15em] uppercase py-4 rounded-2xl transition-all duration-300 shadow-[0_10px_30px_rgba(108,78,190,0.4)] hover:shadow-[0_15px_40px_rgba(108,78,190,0.6)] border border-white/10 flex items-center justify-center gap-2 group text-sm"
                     >
-                      SEND INQUIRY
-                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                      </svg>
+                      {isSubmitting ? (
+                        <>
+                          SENDING...
+                          <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                        </>
+                      ) : (
+                        <>
+                          SEND INQUIRY
+                          <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                          </svg>
+                        </>
+                      )}
                     </button>
                     <p className="text-center text-xs text-white/50 mt-4">
                       By submitting this form you accept our <a href="#" className="underline hover:text-white transition-colors duration-300">privacy policy</a>.
