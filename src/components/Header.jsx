@@ -220,40 +220,42 @@ const Header = () => {
 
           {/* Botón CTA e Icono de Hamburguesa alineados perfectamente al centro */}
           <div className="flex items-center gap-4 shrink-0">
-            {/* CTA con escala táctil y gradiente premium */}
-            {ctaButton.isRoute ? (
-              <Link
-                viewTransition
-                to={ctaButton.path}
-                className={`hidden lg:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
-                  (isContactPage || isVerificationPage)
-                    ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
-                    : isTeamPage
-                      ? '!px-4 !py-1.5 !text-[9px] -translate-x-[20px]'
-                      : scrolled
+            {/* CTA — wrapper hidden on mobile/tablet, visible on desktop only */}
+            <div className="hidden lg:block">
+              {ctaButton.isRoute ? (
+                <Link
+                  viewTransition
+                  to={ctaButton.path}
+                  className={`inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
+                    (isContactPage || isVerificationPage)
+                      ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
+                      : isTeamPage
                         ? '!px-4 !py-1.5 !text-[9px] -translate-x-[20px]'
-                        : '!px-6 !py-3 !text-[13px]'
-                }`}
-              >
-                {ctaButton.text}
-              </Link>
-            ) : (
-              <a
-                href={ctaButton.path}
-                onClick={(e) => ctaButton.isScroll ? handleScrollTo(e, ctaButton.path) : null}
-                className={`hidden lg:inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
-                  (isContactPage || isVerificationPage)
-                    ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
-                    : isTeamPage
-                      ? '!px-4 !py-1.5 !text-[9px] -translate-x-[20px]'
-                      : scrolled
+                        : scrolled
+                          ? '!px-4 !py-1.5 !text-[9px] -translate-x-[20px]'
+                          : '!px-6 !py-3 !text-[13px]'
+                  }`}
+                >
+                  {ctaButton.text}
+                </Link>
+              ) : (
+                <a
+                  href={ctaButton.path}
+                  onClick={(e) => ctaButton.isScroll ? handleScrollTo(e, ctaButton.path) : null}
+                  className={`inline-flex items-center justify-center btn btn-gradient !rounded-full font-bold tracking-wider shadow-lg hover:scale-95 active:scale-90 transition-all duration-200 ${
+                    (isContactPage || isVerificationPage)
+                      ? '!px-4 !py-1.5 !text-[9px] -translate-x-[30px]'
+                      : isTeamPage
                         ? '!px-4 !py-1.5 !text-[9px] -translate-x-[20px]'
-                        : '!px-6 !py-3 !text-[13px]'
-                }`}
-              >
-                {ctaButton.text}
-              </a>
-            )}
+                        : scrolled
+                          ? '!px-4 !py-1.5 !text-[9px] -translate-x-[20px]'
+                          : '!px-6 !py-3 !text-[13px]'
+                  }`}
+                >
+                  {ctaButton.text}
+                </a>
+              )}
+            </div>
 
             {/* Hamburguesa para móvil */}
             <button
