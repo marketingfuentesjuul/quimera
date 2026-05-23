@@ -291,14 +291,14 @@ const Header = () => {
                 <div key={link.name} className="flex flex-col border-b border-slate-100/50 py-2">
                   <button
                     onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                    className="text-sm font-semibold text-[var(--color-primary-dark)] hover:text-[var(--color-primary)] flex justify-between items-center w-full transition-colors duration-300"
+                    className="text-sm font-semibold text-[var(--color-primary-dark)] hover:text-[var(--color-primary)] flex justify-center items-center gap-1 w-full transition-colors duration-300"
                   >
                     <span>{link.name}</span>
                     <span className={`text-[10px] transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`}>▼</span>
                   </button>
-                  
+
                   {/* Collapsible Submenu */}
-                  <div className={`overflow-hidden transition-all duration-300 flex flex-col gap-2 pl-4 ${
+                  <div className={`overflow-hidden transition-all duration-300 flex flex-col gap-2 ${
                     mobileServicesOpen ? 'max-h-40 mt-3 opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
                   }`}>
                     {link.submenu.map((sub) => (
@@ -311,7 +311,7 @@ const Header = () => {
                             setMobileMenuOpen(false)
                             setMobileServicesOpen(false)
                           }}
-                          className="text-xs font-semibold text-[var(--color-primary-dark)]/80 hover:text-[var(--color-primary)] py-1.5 transition-colors duration-300 text-left"
+                          className="text-xs font-semibold text-[var(--color-primary-dark)]/80 hover:text-[var(--color-primary)] py-1.5 transition-colors duration-300 text-center"
                         >
                           {sub.name}
                         </Link>
@@ -324,7 +324,7 @@ const Header = () => {
                             setMobileMenuOpen(false)
                             setMobileServicesOpen(false)
                           }}
-                          className="text-xs font-semibold text-[var(--color-primary-dark)]/80 hover:text-[var(--color-primary)] py-1.5 transition-colors duration-300 text-left"
+                          className="text-xs font-semibold text-[var(--color-primary-dark)]/80 hover:text-[var(--color-primary)] py-1.5 transition-colors duration-300 text-center"
                         >
                           {sub.name}
                         </a>
