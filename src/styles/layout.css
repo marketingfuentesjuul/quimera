@@ -6,12 +6,16 @@
     padding: 0;
   }
 
+  html {
+    background-color: #06040b;
+  }
+
   body {
     font-family: var(--font-body);
     font-size: var(--font-base);
     line-height: var(--lh-base);
     color: var(--color-text-dark);
-    background-color: var(--color-bg-light);
+    background-color: #06040b;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -201,4 +205,9 @@ main {
 
 .no-view-transition main {
   animation: page-mount-fade 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Force dark transition canvas to prevent any white background flashes */
+::view-transition {
+  background-color: #06040b;
 }

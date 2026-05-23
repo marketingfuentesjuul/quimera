@@ -10,6 +10,7 @@ const Hero = () => {
         display: 'flex', 
         alignItems: 'center', 
         justifyContent: 'center',
+        backgroundColor: '#06040b',
         backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url(/images/hero-image-quimera.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
