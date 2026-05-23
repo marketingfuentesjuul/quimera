@@ -159,12 +159,16 @@
 }
 
 /* --- VIEW TRANSITIONS API STYLING --- */
-::view-transition-old(root) {
-  animation: 300ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+main {
+  view-transition-name: page-content;
 }
 
-::view-transition-new(root) {
-  animation: 350ms cubic-bezier(0.1, 0.76, 0.55, 0.94) both slide-up-fade-in;
+::view-transition-old(page-content) {
+  animation: 250ms cubic-bezier(0.4, 0, 0.2, 1) both fade-out;
+}
+
+::view-transition-new(page-content) {
+  animation: 500ms cubic-bezier(0.16, 1, 0.3, 1) both slide-up-fade-in;
 }
 
 @keyframes fade-out {
@@ -175,10 +179,26 @@
 @keyframes slide-up-fade-in {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(16px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* --- FALLBACK FOR BROWSERS WITHOUT VIEW TRANSITIONS SUPPORT --- */
+@keyframes page-mount-fade {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.no-view-transition main {
+  animation: page-mount-fade 500ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
