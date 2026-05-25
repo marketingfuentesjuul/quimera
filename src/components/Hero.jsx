@@ -21,18 +21,6 @@ const Hero = () => {
       }}
     >
       <div className="container text-center flex flex-col align-center justify-center" style={{ zIndex: 2 }}>
-        <span 
-          className="badge badge-accent" 
-          style={{ 
-            marginBottom: '1.5rem', 
-            backgroundColor: 'var(--color-accent)', 
-            color: 'var(--color-primary-dark)',
-            alignSelf: 'center'
-          }}
-        >
-          Your Boutique Gateway
-        </span>
-        
         <h1 
           style={{ 
             fontSize: 'clamp(2.2rem, 5vw, 3.8rem)', 
