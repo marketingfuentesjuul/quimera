@@ -76,7 +76,7 @@ const ContactPage = () => {
             SEND US A MESSAGE
           </h1>
           
-          <div className="bg-white/[0.03] backdrop-blur-[40px] border border-white/10 rounded-[32px] p-8 md:p-12 shadow-[0_24px_60px_rgba(0,0,0,0.6)] relative overflow-hidden">
+          <div className="bg-white/[0.33] backdrop-blur-[40px] border border-white/10 rounded-[32px] p-8 md:p-12 shadow-[0_24px_60px_rgba(0,0,0,0.6)] relative overflow-hidden">
             {/* Subtle inner top glow for the glass card */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
             
