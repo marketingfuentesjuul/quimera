@@ -50,7 +50,7 @@ const TeamSection = () => {
               Our Team
             </span>
             <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1.5rem', color: '#000', lineHeight: 'var(--lh-tight)' }}>
-              Who is behind Quimera?
+              Who is <span style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-accent) 55%)', padding: '0 0.3rem', borderRadius: '4px' }}>behind</span> Quimera?
             </h2>
             <p className="text-muted text-lg" style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
               Our team is made up of specialists with years of experience across the three strategic pillars of our services: legal, accounting, and commercial.
