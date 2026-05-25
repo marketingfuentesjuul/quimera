@@ -40,17 +40,8 @@ const Footer = () => {
               <img 
                 src="/images/logo-qc-white.png" 
                 alt="Quimera QC Logo" 
-                style={{ width: '40px', height: 'auto', objectFit: 'contain' }} 
+                style={{ width: '80px', height: 'auto', objectFit: 'contain' }} 
               />
-              <span style={{ 
-                fontFamily: 'var(--font-title)', 
-                fontSize: '1.35rem', 
-                fontWeight: 'var(--weight-bold)', 
-                letterSpacing: '0.08em', 
-                color: '#ffffff' 
-              }}>
-                QUIMERA
-              </span>
             </div>
             <p style={{ 
               color: 'rgba(255, 255, 255, 0.65)', 
