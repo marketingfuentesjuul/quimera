@@ -25,15 +25,15 @@ const TeamSection = () => {
               top: '50%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
-              width: '120%',
+              width: '130%',
               height: 'auto',
-              minWidth: '1000px',
-              opacity: 0.15,
+              minWidth: '1100px',
+              opacity: 0.35,
               pointerEvents: 'none',
               zIndex: 0
             }}
-            landColor="rgba(139, 92, 246, 0.25)"
-            oceanColor="transparent"
+            landColor="rgba(139, 92, 246, 0.45)"
+            oceanColor="rgba(139, 92, 246, 0.08)"
           />
 
           <div className="grid grid-cols-1 grid-cols-md-2 gap-8 items-center" style={{ position: 'relative', zIndex: 1 }}>
