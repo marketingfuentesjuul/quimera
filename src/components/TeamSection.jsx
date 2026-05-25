@@ -28,7 +28,7 @@ const TeamSection = () => {
               width: '130%',
               height: 'auto',
               minWidth: '1100px',
-              opacity: 0.28,
+              opacity: 0.22,
               pointerEvents: 'none',
               zIndex: 0
             }}
