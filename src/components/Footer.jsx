@@ -118,10 +118,10 @@ const Footer = () => {
             </p>
             <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: 'var(--font-sm)', margin: '0 0 1.5rem 0' }}>
               <strong>Email:</strong><br />
-              <a href="mailto:contacto@quimeracg.cl" className="footer-link">contacto@quimeracg.cl</a>
+              <a href="mailto:info@quimeracg.cl" className="footer-link">info@quimeracg.cl</a>
             </p>
             <div className="flex gap-2" style={{ width: '100%', justifyContent: 'inherit' }}>
-              <a href="mailto:contacto@quimeracg.cl" className="btn btn-white" style={{ padding: '0.6rem 1.25rem', fontSize: 'var(--font-xs)', borderRadius: 'var(--radius-sm)', textTransform: 'none' }}>
+              <a href="mailto:info@quimeracg.cl" className="btn btn-white" style={{ padding: '0.6rem 1.25rem', fontSize: 'var(--font-xs)', borderRadius: 'var(--radius-sm)', textTransform: 'none' }}>
                 Email Us
               </a>
             </div>

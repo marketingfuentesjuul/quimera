@@ -24,10 +24,10 @@ const teamMembers = [
     linkedin: 'https://www.linkedin.com/in/maximiliano-fuentes-cid-22216b5b/',
   },
   {
-    name: 'Francisco Davilo Juul',
+    name: 'Francisco Tabilo Juul',
     role: 'Head of Sales',
     image: '/images/team/francisco-davilo.jpg',
-    initials: 'FD',
+    initials: 'FT',
     linkedin: 'https://www.linkedin.com/in/franciscotabilojuul/',
   },
   {
