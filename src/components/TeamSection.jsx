@@ -81,24 +81,24 @@ const TeamSection = () => {
               <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1.5rem', color: '#000', lineHeight: 'var(--lh-tight)' }}>
                 Who is behind Quimera?
               </h2>
-              <p className="text-muted text-lg" style={{ marginBottom: '1.5rem', lineHeight: '1.6' }}>
+              <p className="text-muted text-lg" style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: '#374151' }}>
                 Our team is made up of specialists with years of experience across the three strategic pillars of our services: legal, accounting, and commercial.
               </p>
-              <p className="text-muted" style={{ marginBottom: '2rem', lineHeight: '1.6' }}>
+              <p className="text-muted" style={{ marginBottom: '2rem', lineHeight: '1.6', color: '#374151' }}>
                 We define Quimera as a boutique firm that prioritizes quality, offering direct access to senior specialists and tailor-made responses to each company's unique needs. We guide you with confidence and precision through local regulations and market entry.
               </p>
               
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.2rem' }}>✓</span>
-                  <span style={{ fontWeight: 'var(--weight-semibold)', color: 'var(--color-primary-dark)', fontFamily: 'var(--font-title)' }}>
+                  <span style={{ fontWeight: 'var(--weight-semibold)', color: '#1e1b4b', fontFamily: 'var(--font-title)' }}>
                     Senior Legal Counselors
                   </span>
                 </div>
   
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                   <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.2rem' }}>✓</span>
-                  <span style={{ fontWeight: 'var(--weight-semibold)', color: 'var(--color-primary-dark)', fontFamily: 'var(--font-title)' }}>
+                  <span style={{ fontWeight: 'var(--weight-semibold)', color: '#1e1b4b', fontFamily: 'var(--font-title)' }}>
                     Local Market Entry Experts
                   </span>
                 </div>
