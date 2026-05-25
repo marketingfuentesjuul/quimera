@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { DottedWorldMap } from './ui/DottedWorldMap';
 
 const TeamSection = () => {
   const [imageRef, imageRevealed] = useIntersectionObserver({ threshold: 0.15 });
@@ -9,6 +10,7 @@ const TeamSection = () => {
       <div className="container">
         {/* Horizontal Card Container */}
         <div style={{
+          position: 'relative',
           backgroundColor: '#ffffff',
           borderRadius: '24px',
           border: '1px solid var(--color-border)',
@@ -16,7 +18,25 @@ const TeamSection = () => {
           padding: '3.5rem 3rem',
           overflow: 'hidden'
         }}>
-          <div className="grid grid-cols-1 grid-cols-md-2 gap-8 items-center">
+          {/* Subtle Dotted World Map Background Texture */}
+          <DottedWorldMap 
+            style={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '120%',
+              height: 'auto',
+              minWidth: '1000px',
+              opacity: 0.15,
+              pointerEvents: 'none',
+              zIndex: 0
+            }}
+            landColor="rgba(139, 92, 246, 0.25)"
+            oceanColor="transparent"
+          />
+
+          <div className="grid grid-cols-1 grid-cols-md-2 gap-8 items-center" style={{ position: 'relative', zIndex: 1 }}>
             {/* Column 1: Decorated Image */}
             <div 
               ref={imageRef}
