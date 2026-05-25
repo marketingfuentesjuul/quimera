@@ -31,7 +31,9 @@ const Services = () => {
           style={{ marginBottom: '4rem' }}
         >
           <span className="badge badge-primary" style={{ marginBottom: '1rem' }}>Our Solutions</span>
-          <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1rem', color: '#000' }}>How can we help your company begin operations in Chile?</h2>
+          <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1rem', color: '#000' }}>
+            How can we help your company <span style={{ textDecoration: 'underline', textDecorationColor: 'var(--color-primary-light)', textUnderlineOffset: '6px', textDecorationThickness: '3px' }}>begin operations in Chile</span>?
+          </h2>
           <p className="text-muted" style={{ maxWidth: '700px', margin: '0 auto' }}>
             Discover how our comprehensive solutions empower your journey.
           </p>
