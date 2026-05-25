@@ -47,7 +47,7 @@ const Hero = () => {
           }}
         >
           Connecting Your <span style={{
-            background: 'linear-gradient(135deg, #ffffff 20%, #ddd6fe 100%)',
+            background: 'linear-gradient(135deg, #ffffff 10%, #bfa3ff 100%)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             display: 'inline-block'
