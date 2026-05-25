@@ -84,7 +84,7 @@ const TeamSection = () => {
               <p className="text-muted text-lg" style={{ marginBottom: '1.5rem', lineHeight: '1.6', color: '#374151' }}>
                 Our team is made up of specialists with years of experience across the three strategic pillars of our services: legal, accounting, and commercial.
               </p>
-              <p className="text-muted" style={{ marginBottom: '2rem', lineHeight: '1.6', color: '#374151' }}>
+              <p className="text-muted text-lg" style={{ marginBottom: '2rem', lineHeight: '1.6', color: '#374151' }}>
                 We define Quimera as a boutique firm that prioritizes quality, offering direct access to senior specialists and tailor-made responses to each company's unique needs. We guide you with confidence and precision through local regulations and market entry.
               </p>
               
