@@ -66,12 +66,7 @@ const TeamSection = () => {
                   Senior Legal Counselors
                 </span>
               </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-                <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.2rem' }}>✓</span>
-                <span style={{ fontWeight: 'var(--weight-semibold)', color: 'var(--color-primary-dark)', fontFamily: 'var(--font-title)' }}>
-                  Certified Public Accountants
-                </span>
-              </div>
+
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
                 <span style={{ color: 'var(--color-primary)', fontWeight: 'bold', fontSize: '1.2rem' }}>✓</span>
                 <span style={{ fontWeight: 'var(--weight-semibold)', color: 'var(--color-primary-dark)', fontFamily: 'var(--font-title)' }}>
