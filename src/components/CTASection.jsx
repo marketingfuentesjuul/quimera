@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { DottedWorldMap } from './ui/DottedWorldMap';
 
 const CTASection = () => {
   const [ref, revealed] = useIntersectionObserver({ threshold: 0.15 });
@@ -15,6 +16,24 @@ const CTASection = () => {
         overflow: 'hidden'
       }}
     >
+      {/* Subtle Dotted World Map Background Texture */}
+      <DottedWorldMap 
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '125%',
+          height: 'auto',
+          minWidth: '1080px',
+          opacity: 0.18,
+          pointerEvents: 'none',
+          zIndex: 0
+        }}
+        landColor="rgba(168, 85, 247, 0.45)"
+        oceanColor="transparent"
+      />
+
       {/* Background Glowing Blobs - Premium Violet & Lilac Auras */}
       <div 
         style={{
