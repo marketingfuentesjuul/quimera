@@ -288,7 +288,7 @@ textarea.form-control {
 /* Custom Lilac Scroll Styles for Mobile Menu to avoid oklab() translation */
 @media (max-width: 767px) {
   .mobile-scrolled-lilac {
-    background-color: rgba(210, 195, 255, 0.82) !important;
+    background-color: rgba(150, 125, 220, 0.85) !important;
     backdrop-filter: blur(24px) saturate(1.4) !important;
     -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
     border: 1px solid rgba(255, 255, 255, 0.35) !important;
@@ -304,7 +304,7 @@ textarea.form-control {
     border-radius: 0 !important;
   }
   .mobile-dropdown-scrolled-lilac {
-    background-color: rgba(220, 205, 255, 0.9) !important;
+    background-color: rgba(160, 135, 230, 0.9) !important;
     backdrop-filter: blur(24px) saturate(1.4) !important;
     -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
     border: 1px solid rgba(255, 255, 255, 0.35) !important;
@@ -324,7 +324,7 @@ textarea.form-control {
 /* Custom Lilac Scroll Style for Desktop Menu */
 @media (min-width: 768px) {
   .desktop-scrolled-lilac {
-    background-color: rgba(140, 100, 245, 0.35) !important;
+    background-color: rgba(90, 60, 200, 0.45) !important;
     backdrop-filter: blur(24px) saturate(1.4) !important;
     -webkit-backdrop-filter: blur(24px) saturate(1.4) !important;
     border-color: rgba(255, 255, 255, 0.2) !important;
