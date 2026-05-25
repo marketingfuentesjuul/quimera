@@ -114,7 +114,7 @@ const ContactPage = () => {
                     onChange={handleChange}
                     placeholder="Full name"
                     required
-                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm"
+                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm"
                     style={{ padding: '16px 24px' }}
                   />
                 </div>
@@ -127,7 +127,7 @@ const ContactPage = () => {
                     onChange={handleChange}
                     placeholder="Email"
                     required
-                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm"
+                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm"
                     style={{ padding: '16px 24px' }}
                   />
                 </div>
@@ -139,7 +139,7 @@ const ContactPage = () => {
                     value={formData.company}
                     onChange={handleChange}
                     placeholder="Company name"
-                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm"
+                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm"
                     style={{ padding: '16px 24px' }}
                   />
                 </div>
@@ -152,7 +152,7 @@ const ContactPage = () => {
                     placeholder="Message"
                     required
                     rows="4"
-                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm resize-none"
+                    className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm resize-none"
                     style={{ padding: '16px 24px' }}
                   />
                 </div>
