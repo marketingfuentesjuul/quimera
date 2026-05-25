@@ -44,11 +44,11 @@
   --font-sm: 0.875rem;
   --font-base: 1rem;
   --font-lg: 1.125rem;
-  --font-xl: 1.25rem;
-  --font-2xl: 1.5rem;
-  --font-3xl: 2rem;
-  --font-4xl: 2.75rem;
-  --font-5xl: 3.5rem;
+  --font-xl: 1.375rem;
+  --font-2xl: 1.625rem;
+  --font-3xl: 2.25rem;
+  --font-4xl: 3rem;
+  --font-5xl: 3.75rem;
 
   /* Font Weights */
   --weight-light: 300;
