@@ -129,7 +129,7 @@ const ChileanCompanyVerificationPage = () => {
                       onChange={handleChange}
                       placeholder="Enter your full name"
                       required
-                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
+                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
                     />
                   </div>
 
@@ -146,7 +146,7 @@ const ChileanCompanyVerificationPage = () => {
                         onChange={handleChange}
                         placeholder="your@email.com"
                         required
-                        className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
+                        className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
                       />
                     </div>
                     <div className="flex flex-col gap-2">
@@ -160,7 +160,7 @@ const ChileanCompanyVerificationPage = () => {
                         onChange={handleChange}
                         placeholder="Enter company name"
                         required
-                        className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
+                        className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
                       />
                     </div>
                   </div>
@@ -177,7 +177,7 @@ const ChileanCompanyVerificationPage = () => {
                       onChange={handleChange}
                       placeholder="Enter your job title"
                       required
-                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
+                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm py-4 px-6"
                     />
                   </div>
 
@@ -193,7 +193,7 @@ const ChileanCompanyVerificationPage = () => {
                       placeholder="Describe the company verification or background check details you need..."
                       required
                       rows="4"
-                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white/40 font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm resize-none py-4 px-6"
+                      className="w-full bg-white/5 border border-white/10 text-white placeholder-white font-medium rounded-2xl focus:outline-none focus:bg-white/10 focus:border-[#8b6ce5]/50 focus:ring-4 focus:ring-[#8b6ce5]/10 hover:bg-white/[0.07] hover:border-white/20 transition-all duration-300 text-sm resize-none py-4 px-6"
                     />
                   </div>
 
