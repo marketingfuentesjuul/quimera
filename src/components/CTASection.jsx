@@ -131,7 +131,7 @@ const CTASection = () => {
                 maxWidth: '720px'
               }}
             >
-              Are you ready to start your new{' '}
+              Ready to start your new{' '}
               <span 
                 style={{ 
                   color: '#bfa3ff',
