@@ -63,7 +63,11 @@ const Services = () => {
                 />
               </div>
               <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                <h3 style={{ fontSize: 'var(--font-xl)', marginBottom: '1rem', color: '#000' }}>{service.title}</h3>
+                <h3 style={{ fontSize: 'var(--font-xl)', marginBottom: '1rem', color: '#000' }}>
+                  <span style={{ textDecoration: 'underline', textDecorationColor: '#ffd043', textUnderlineOffset: '6px', textDecorationThickness: '3px' }}>
+                    {service.title}
+                  </span>
+                </h3>
                 <p className="text-muted text-sm" style={{ marginBottom: 0, flex: 1 }}>{service.description}</p>
               </div>
             </div>
