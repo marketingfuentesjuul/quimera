@@ -11,7 +11,7 @@ const Hero = () => {
         alignItems: 'center', 
         justifyContent: 'center',
         backgroundColor: '#06040b',
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)), url(/images/hero-image-quimera.jpg)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url(/images/hero-image-quimera.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'scroll',
@@ -41,12 +41,23 @@ const Hero = () => {
             color: '#fff',
             maxWidth: '900px',
             textTransform: 'uppercase',
-            fontWeight: 'var(--weight-bold)',
+            fontWeight: 'var(--weight-extrabold)',
             marginRight: 'auto',
             marginLeft: 'auto'
           }}
         >
-          Connecting Your Business With<br />The Chilean Market
+          Connecting Your <span style={{
+            background: 'linear-gradient(135deg, #c4b5fd 0%, #a78bfa 50%, #8b5cf6 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            display: 'inline-block'
+          }}>Business With</span><br />
+          <span style={{
+            background: 'linear-gradient(180deg, #ffffff 20%, rgba(255, 255, 255, 0.25) 100%)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            display: 'inline-block'
+          }}>The Chilean Market</span>
         </h1>
         
         <p 
