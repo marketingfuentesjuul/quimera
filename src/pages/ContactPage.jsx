@@ -67,7 +67,7 @@ const ContactPage = () => {
         {/* Globe centered behind the form */}
         <div className="absolute top-[50%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[840px] md:w-[1240px] aspect-square pointer-events-none z-0 flex justify-center items-center">
           <div className="w-full h-full pointer-events-auto">
-            <GlobePulse className="w-full h-full" speed={0.004} />
+            <GlobePulse className="w-full h-full" speed={0.002} />
           </div>
         </div>
 
