@@ -85,7 +85,7 @@ const Team = () => {
             lineHeight: 'var(--lh-tight)',
             fontFamily: 'var(--font-title)',
           }}>
-            The people behind Quimera
+            The people <span style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-accent) 55%)', padding: '0 0.3rem', borderRadius: '4px' }}>behind</span> Quimera
           </h2>
           <p className="text-muted text-lg" style={{ maxWidth: '640px', margin: '0 auto', lineHeight: '1.7', color: 'rgba(255, 255, 255, 0.7)' }}>
             A boutique team of senior specialists fully committed to your success in the Chilean market.
