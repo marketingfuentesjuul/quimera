@@ -3,21 +3,25 @@ import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
 import { DottedWorldMap } from './ui/DottedWorldMap';
 
 const TeamSection = () => {
-  const [imageRef, imageRevealed] = useIntersectionObserver({ threshold: 0.15 });
+  const [cardRef, cardRevealed] = useIntersectionObserver({ threshold: 0.15 });
 
   return (
     <section id="team" className="section" style={{ backgroundColor: 'var(--color-bg-light)' }}>
       <div className="container">
         {/* Horizontal Card Container */}
-        <div style={{
-          position: 'relative',
-          backgroundColor: '#ffffff',
-          borderRadius: '24px',
-          border: '1px solid var(--color-border)',
-          boxShadow: 'var(--shadow-lg)',
-          padding: '3.5rem 3rem',
-          overflow: 'hidden'
-        }}>
+        <div 
+          ref={cardRef}
+          className={`reveal-on-scroll ${cardRevealed ? 'revealed' : ''}`}
+          style={{
+            position: 'relative',
+            backgroundColor: '#ffffff',
+            borderRadius: '24px',
+            border: '1px solid var(--color-border)',
+            boxShadow: 'var(--shadow-lg)',
+            padding: '3.5rem 3rem',
+            overflow: 'hidden'
+          }}
+        >
           {/* Subtle Dotted World Map Background Texture */}
           <DottedWorldMap 
             style={{
@@ -39,8 +43,6 @@ const TeamSection = () => {
           <div className="grid grid-cols-1 grid-cols-md-2 gap-8 items-center" style={{ position: 'relative', zIndex: 1 }}>
             {/* Column 1: Decorated Image */}
             <div 
-              ref={imageRef}
-              className={`reveal-on-scroll ${imageRevealed ? 'revealed' : ''}`}
               style={{ position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '1rem' }}
             >
               {/* Background decorative solid shape */}
