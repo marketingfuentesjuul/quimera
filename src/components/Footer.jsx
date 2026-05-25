@@ -107,9 +107,13 @@ const Footer = () => {
               Bellavista 5, Office 111, Olimpo Building<br />
               Viña del Mar, Chile.
             </p>
-            <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: 'var(--font-sm)', margin: '0 0 1.5rem 0' }}>
+            <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: 'var(--font-sm)', margin: '0 0 1.25rem 0' }}>
               <strong>Email:</strong><br />
               <a href="mailto:info@quimeracg.cl" className="footer-link">info@quimeracg.cl</a>
+            </p>
+            <p style={{ color: 'rgba(255, 255, 255, 0.65)', fontSize: 'var(--font-sm)', margin: '0 0 1.5rem 0' }}>
+              <strong>WhatsApp Number:</strong><br />
+              <a href="https://wa.me/56956519981" target="_blank" rel="noopener noreferrer" className="footer-link">+56 9 5651 9981</a>
             </p>
             <div className="flex gap-2" style={{ width: '100%', justifyContent: 'inherit' }}>
               <a href="mailto:info@quimeracg.cl" className="btn btn-white" style={{ padding: '0.6rem 1.25rem', fontSize: 'var(--font-xs)', borderRadius: 'var(--radius-sm)', textTransform: 'none' }}>
