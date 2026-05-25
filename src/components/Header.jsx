@@ -120,7 +120,7 @@ const Header = () => {
               : {}
         }
       >
-        <nav className="w-full flex justify-between items-center font-['Outfit'] text-sm font-medium tracking-tight">
+        <nav className="w-full flex justify-between items-center font-['Inter'] text-sm font-medium tracking-tight">
           
           {/* Logo con redimensionamiento suave */}
           <div className="flex items-center shrink-0">
@@ -149,7 +149,7 @@ const Header = () => {
             {navLinks.map((link) => {
               if (link.hasDropdown) {
                 return (
-                  <div key={link.name} className="group relative py-2 cursor-pointer font-['Outfit'] text-xs font-semibold tracking-wider transition-all duration-300 !text-white/90 hover:!text-white flex items-center">
+                  <div key={link.name} className="group relative py-2 cursor-pointer font-['Inter'] text-xs font-semibold tracking-wider transition-all duration-300 !text-white/90 hover:!text-white flex items-center">
                     <span>{link.name}</span>
                     <span className="ml-1 text-[9px] align-middle inline-block transition-transform duration-300 group-hover:rotate-180">▼</span>
                     <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] transition-all duration-300 group-hover:w-4/5 ${
@@ -166,7 +166,7 @@ const Header = () => {
                           viewTransition
                           to="/chilean-company-verification"
                           onClick={() => setMobileMenuOpen(false)}
-                          className="w-full text-left text-white hover:text-[#bfa3ff] font-['Outfit'] text-[14px] font-semibold leading-snug tracking-wide block transition-colors duration-200 py-5"
+                          className="w-full text-left text-white hover:text-[#bfa3ff] font-['Inter'] text-[14px] font-semibold leading-snug tracking-wide block transition-colors duration-200 py-5"
                           style={{ textAlign: 'left', display: 'block', width: '100%', paddingLeft: '9px' }}
                         >
                           Chilean Company<br />Verification
@@ -177,7 +177,7 @@ const Header = () => {
                         <a
                           href="#services"
                           onClick={(e) => handleScrollTo(e, '#services')}
-                          className="w-full text-left text-white hover:text-[#bfa3ff] font-['Outfit'] text-[14px] font-semibold leading-snug tracking-wide block transition-colors duration-200 py-5"
+                          className="w-full text-left text-white hover:text-[#bfa3ff] font-['Inter'] text-[14px] font-semibold leading-snug tracking-wide block transition-colors duration-200 py-5"
                           style={{ textAlign: 'left', display: 'block', width: '100%', paddingLeft: '9px' }}
                         >
                           Compliance
@@ -194,7 +194,7 @@ const Header = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="group relative py-2 font-['Outfit'] text-xs font-semibold tracking-wider transition-all duration-300 !text-white/90 hover:!text-white"
+                  className="group relative py-2 font-['Inter'] text-xs font-semibold tracking-wider transition-all duration-300 !text-white/90 hover:!text-white"
                 >
                   <span>{link.name}</span>
                   <span className={`absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] transition-all duration-300 group-hover:w-4/5 ${
@@ -206,7 +206,7 @@ const Header = () => {
                   key={link.name}
                   href={link.path}
                   onClick={(e) => link.isScroll ? handleScrollTo(e, link.path) : null}
-                  className="group relative py-2 font-['Outfit'] text-xs font-semibold tracking-wider transition-all duration-300 !text-white/90 hover:!text-white"
+                  className="group relative py-2 font-['Inter'] text-xs font-semibold tracking-wider transition-all duration-300 !text-white/90 hover:!text-white"
                 >
                   <span>{link.name}</span>
                   {/* Indicador de Underline Premium */}

@@ -36,7 +36,7 @@
   --glass-shadow: 0 8px 32px 0 rgba(86, 65, 153, 0.08);
 
   /* --- TYPOGRAPHY (Outfit & Inter) --- */
-  --font-title: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-title: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Font Sizes */

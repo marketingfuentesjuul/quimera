@@ -82,7 +82,7 @@ const ChileanCompanyVerificationPage = () => {
       <main className="flex-1 pb-16 flex flex-col items-center relative z-10 px-4" style={{ marginTop: '180px' }}>
         <div className="w-full max-w-4xl">
           <div className="text-center" style={{ marginBottom: '48px' }}>
-            <h1 className="font-['Outfit'] text-[28px] md:text-[36px] font-extrabold tracking-[0.15em] text-white uppercase drop-shadow-lg" style={{ marginBottom: '28px' }}>
+            <h1 className="font-['Inter'] text-[28px] md:text-[36px] font-extrabold tracking-[0.15em] text-white uppercase drop-shadow-lg" style={{ marginBottom: '28px' }}>
               CHILEAN COMPANY VERIFICATION
             </h1>
             <p className="text-white text-base md:text-lg max-w-2xl mx-auto" style={{ lineHeight: '1.7' }}>
@@ -105,7 +105,7 @@ const ChileanCompanyVerificationPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="font-['Outfit'] text-xl font-bold text-white mb-2">Inquiry Sent Successfully</h3>
+                  <h3 className="font-['Inter'] text-xl font-bold text-white mb-2">Inquiry Sent Successfully</h3>
                   <p className="text-white/70 text-sm max-w-sm mx-auto">
                     Thank you for contacting us. Our specialists will review your request and get back to you shortly.
                   </p>

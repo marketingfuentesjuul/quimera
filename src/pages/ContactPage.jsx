@@ -72,7 +72,7 @@ const ContactPage = () => {
         </div>
 
         <div className="w-full max-w-[580px] z-10">
-          <h1 className="text-center font-['Outfit'] text-[24px] md:text-[30px] font-extrabold tracking-[0.2em] text-white uppercase drop-shadow-lg" style={{ marginBottom: '64px' }}>
+          <h1 className="text-center font-['Inter'] text-[24px] md:text-[30px] font-extrabold tracking-[0.2em] text-white uppercase drop-shadow-lg" style={{ marginBottom: '64px' }}>
             SEND US A MESSAGE
           </h1>
           
@@ -87,7 +87,7 @@ const ContactPage = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <h3 className="font-['Outfit'] text-xl font-bold text-white mb-2">Message Sent Successfully</h3>
+                <h3 className="font-['Inter'] text-xl font-bold text-white mb-2">Message Sent Successfully</h3>
                 <p className="text-white/70 text-sm max-w-sm mx-auto">
                   Thank you for contacting us. Our specialists will review your request and get back to you shortly.
                 </p>
