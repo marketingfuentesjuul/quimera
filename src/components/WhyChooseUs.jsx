@@ -117,7 +117,7 @@ const WhyChooseUs = () => {
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <h3 style={{ fontSize: 'var(--font-xl)', marginBottom: '0.75rem', color: '#000' }}>{pillar.title}</h3>
-                  <p className="text-muted" style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: 0, color: '#4b5563' }}>
+                  <p className="text-muted" style={{ fontSize: '15px', lineHeight: '1.6', marginBottom: 0, color: '#4b5563' }}>
                     {pillar.description}
                   </p>
                   
@@ -129,10 +129,11 @@ const WhyChooseUs = () => {
                     transition: 'max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin-top 0.3s ease',
                     marginTop: isExpanded ? '1rem' : '0px'
                   }}>
-                    <p className="text-muted" style={{ fontSize: '16px', lineHeight: '1.6', marginBottom: 0, color: '#4b5563' }}>
+                    <p className="text-muted" style={{ fontSize: '15px', lineHeight: '1.6', marginBottom: 0, color: '#4b5563' }}>
                       {pillar.extendedDescription}
                     </p>
                   </div>
+
 
 
 
