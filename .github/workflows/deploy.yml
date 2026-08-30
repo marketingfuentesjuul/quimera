@@ -1,10 +1,10 @@
 # -----------------------------------------------------------------------------
 # QUIMERA SITE - AUTOMATED DEPLOYMENT WORKFLOW (GITHUB ACTIONS)
 # Este workflow se ejecuta automáticamente ante cada push a la rama 'main'.
-# Compila la aplicación de React y sube los archivos al servidor SiteGround via rsync.
+# Compila la aplicación de React y sube los archivos al servidor Hostinger via FTP.
 # -----------------------------------------------------------------------------
 
-name: Build and Deploy to SiteGround
+name: Build and Deploy to Hostinger
 
 on:
   push:
@@ -13,7 +13,7 @@ on:
 
 jobs:
   web-deploy:
-    name: 🎉 Build & Deploy
+    name: 🎉 Build & Deploy to Hostinger
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
@@ -31,21 +31,12 @@ jobs:
       - name: 🏗️ Build React App
         run: npm run build
 
-      - name: 🔑 Configure SSH Key
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: 🚀 Deploy via FTP to Hostinger
+        uses: SamKirland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: public_html/
+          local-dir: ./dist/
 
-      - name: 🧪 Test SSH Connection (Debug)
-        run: |
-          OUTPUT=$(ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "pwd && ls -la && ls -la www/ || true" 2>&1 | tr '\n' ' ')
-          echo "::warning file=.github,line=1::Remote directories: $OUTPUT"
-
-      - name: 🚀 Deploy with rsync
-        run: |
-          rsync -avz --delete \
-            -e "ssh -i ~/.ssh/id_ed25519 -p ${{ secrets.SSH_PORT }} -o StrictHostKeyChecking=no" \
-            dist/ \
-            ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/${{ secrets.SSH_USER }}/www/quimeracg.cl/public_html/
