@@ -78,9 +78,6 @@ const WhyChooseUs = () => {
           className={`text-center reveal-on-scroll ${headerRevealed ? 'revealed' : ''}`}
           style={{ marginBottom: '4rem' }}
         >
-          <span className="badge badge-accent" style={{ marginBottom: '1rem', backgroundColor: 'var(--color-accent)', color: 'var(--color-primary-dark)' }}>
-            Our Value Proposition
-          </span>
           <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1.5rem', lineHeight: 'var(--lh-tight)', color: '#000', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
             Why choose us to <span style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-accent) 55%)', padding: '0 0.3rem', borderRadius: '4px' }}>start your journey</span> in Chile?
           </h2>

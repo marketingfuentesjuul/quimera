@@ -77,9 +77,6 @@ const TeamSection = () => {
             
             {/* Column 2: Content */}
             <div style={{ zIndex: 3 }}>
-              <span className="badge badge-primary" style={{ marginBottom: '1rem', backgroundColor: 'var(--color-primary)', color: 'white' }}>
-                Our Team
-              </span>
               <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1.5rem', color: '#000', lineHeight: 'var(--lh-tight)' }}>
                 Who is behind Quimera?
               </h2>
