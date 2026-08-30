@@ -28,7 +28,7 @@ const ChileanCompanyVerificationPage = () => {
     setIsSubmitting(true);
     setSubmitError(false);
 
-    const webhookUrl = import.meta.env.VITE_N8N_VERIFICATION_WEBHOOK_URL || 'https://n8n-rqyx.srv1885958.hstgr.cloud/webhook/verificacion-quimera';
+    const webhookUrl = import.meta.env.VITE_N8N_VERIFICATION_WEBHOOK_URL || 'https://n8n-rqyx.srv1885958.hstgr.cloud/webhook-test/verificacion-quimera';
 
     try {
       const response = await fetch(webhookUrl, {
