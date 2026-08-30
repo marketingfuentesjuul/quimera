@@ -30,7 +30,6 @@ const Services = () => {
           className={`text-center reveal-on-scroll ${headerRevealed ? 'revealed' : ''}`}
           style={{ marginBottom: '4rem' }}
         >
-          <span className="badge badge-primary" style={{ marginBottom: '1rem' }}>Our Solutions</span>
           <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1rem', color: '#000' }}>
             How can we help your company <span style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-accent) 55%)', padding: '0 0.3rem', borderRadius: '4px' }}>begin operations in Chile</span>?
           </h2>
