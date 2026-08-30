@@ -81,7 +81,7 @@ const WhyChooseUs = () => {
           <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1.5rem', lineHeight: 'var(--lh-tight)', color: '#000', maxWidth: '800px', marginLeft: 'auto', marginRight: 'auto' }}>
             Why choose us to <span style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-accent) 55%)', padding: '0 0.3rem', borderRadius: '4px' }}>start your journey</span> in Chile?
           </h2>
-          <p className="text-muted text-lg" style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <p className="text-muted" style={{ maxWidth: '800px', margin: '0 auto', fontSize: '15px', lineHeight: '1.6', color: '#4b5563' }}>
             Our firm stands out for three distinctive hallmarks: we are a boutique firm, we provide tailor-made services adapted to each company’s needs, and we are experts in Chilean regulation and the local market.
           </p>
         </div>

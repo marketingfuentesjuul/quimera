@@ -33,9 +33,10 @@ const Services = () => {
           <h2 style={{ fontSize: 'var(--font-3xl)', marginBottom: '1rem', color: '#000' }}>
             How can we help your company <span style={{ background: 'linear-gradient(180deg, transparent 55%, var(--color-accent) 55%)', padding: '0 0.3rem', borderRadius: '4px' }}>begin operations in Chile</span>?
           </h2>
-          <p className="text-muted" style={{ maxWidth: '700px', margin: '0 auto' }}>
+          <p className="text-muted" style={{ maxWidth: '700px', margin: '0 auto', fontSize: '15px', lineHeight: '1.6', color: '#4b5563' }}>
             Discover how our comprehensive solutions empower your journey.
           </p>
+
         </div>
 
         <div 
