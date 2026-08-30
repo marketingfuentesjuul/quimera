@@ -11,7 +11,7 @@ const Hero = () => {
         alignItems: 'center', 
         justifyContent: 'center',
         backgroundColor: '#06040b',
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url(/images/hero-image-quimera.jpg)',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url(/images/hero-image-quimera.webp)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'scroll',
