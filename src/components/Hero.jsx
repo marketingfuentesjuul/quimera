@@ -11,15 +11,40 @@ const Hero = () => {
         alignItems: 'center', 
         justifyContent: 'center',
         backgroundColor: '#06040b',
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)), url(/images/hero-image-quimera.webp)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'scroll',
+        overflow: 'hidden',
         color: '#fff',
         paddingTop: '100px',
         paddingBottom: '60px'
       }}
     >
+      {/* Preloaded High-Priority Background Image */}
+      <img
+        src="/images/hero-image-quimera.webp"
+        alt="Quimera Background"
+        fetchPriority="high"
+        loading="eager"
+        decoding="sync"
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          objectFit: 'cover',
+          objectPosition: 'center',
+          zIndex: 0
+        }}
+      />
+      {/* Dark Overlay Gradient */}
+      <div 
+        style={{
+          position: 'absolute',
+          inset: 0,
+          width: '100%',
+          height: '100%',
+          background: 'linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75))',
+          zIndex: 1
+        }}
+      />
       <div className="container text-center flex flex-col align-center justify-center" style={{ zIndex: 2 }}>
         <h1 
           style={{ 
