@@ -149,7 +149,7 @@ const CTASection = () => {
             {/* Paragraph Text (White/muted) */}
             <p 
               style={{ 
-                fontSize: 'var(--font-lg)', 
+                fontSize: '15px', 
                 lineHeight: '1.65',
                 color: 'rgba(255, 255, 255, 0.75)', 
                 fontFamily: 'var(--font-body)',
