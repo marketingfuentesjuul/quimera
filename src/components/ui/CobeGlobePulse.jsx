@@ -11,7 +11,7 @@ const defaultMarkers = [
 export function GlobePulse({
   markers = defaultMarkers,
   className = "",
-  speed = 0.0015,
+  speed = 0.0009,
 }) {
   const canvasRef = useRef(null)
   const pointerInteracting = useRef(null)
