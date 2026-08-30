@@ -67,7 +67,7 @@ const Services = () => {
                     {service.title}
                   </span>
                 </h3>
-                <p className="text-muted" style={{ fontSize: '0.95rem', lineHeight: '1.65', color: '#374151', marginBottom: 0, flex: 1 }}>{service.description}</p>
+                <p className="text-muted" style={{ fontSize: '0.875rem', lineHeight: '1.6', color: '#4b5563', marginBottom: 0, flex: 1 }}>{service.description}</p>
               </div>
             </div>
           ))}
