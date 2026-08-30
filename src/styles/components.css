@@ -102,6 +102,13 @@
   border-color: var(--color-accent);
 }
 
+.card p,
+.card-glass p {
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: #4b5563 !important;
+}
+
 .card-glass {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
