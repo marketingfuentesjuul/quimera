@@ -26,7 +26,7 @@ const ContactPage = () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
 
-    const webhookUrl = import.meta.env.VITE_N8N_CONTACT_WEBHOOK_URL || 'https://n8n.yourdomain.com/webhook/contacto-quimera';
+    const webhookUrl = import.meta.env.VITE_N8N_CONTACT_WEBHOOK_URL || 'https://n8n-rqyx.srv1885958.hstgr.cloud/webhook/contacto-quimera';
 
     try {
       const response = await fetch(webhookUrl, {
